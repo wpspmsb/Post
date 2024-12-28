@@ -66,11 +66,11 @@ class FacebookCommenter:
 
             r.headers.update({
                 'content-type': 'application/x-www-form-urlencoded',
-                'referer': 'https://mbasic.facebook.com/{}'.format(post_id),
-                'origin': 'https://mbasic.facebook.com',
+                'referer': 'https://business.facebook.com/business_locations'/{}'.format(post_id),
+                'origin': 'https://business.facebook.com/business_locations'',
             })
 
-            response2 = r.post('https://mbasic.facebook.com{}'.format(self.next_action), data=data, cookies={"cookie": cookies})
+            response2 = r.post('https://business.facebook.com/business_locations'{}'.format(self.next_action), data=data, cookies={"cookie": cookies})
 
             if 'comment_success' in str(response2.url) and response2.status_code == 200:
                 self.comment_count += 1
